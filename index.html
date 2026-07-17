@@ -83,8 +83,8 @@
   <main class="card">
     <h1>📚 我的学习打卡</h1>
 
-    <p class="date">2026年7月17日</p>
-
+<p class="date" id="today"></p>
+    
     <h2>今日目标</h2>
 
     <ul>
@@ -112,6 +112,15 @@
   </main>
 
   <script>
+    const today = new Date();
+
+document.getElementById("today").textContent =
+  today.toLocaleDateString("zh-CN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    weekday: "long"
+  });
     function checkIn() {
       const message = document.getElementById("message");
 
