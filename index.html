@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>我的学习打卡</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 30px;
+      color: #222;
+    }
+
+    .card {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .date {
+      text-align: center;
+      color: #666;
+    }
+
+    .progress {
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .progress-bar {
+      width: 60%;
+      padding: 8px 0;
+      background: #4f46e5;
+      color: white;
+      text-align: center;
+    }
+
+    li {
+      margin: 12px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #4f46e5;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3730a3;
+    }
+
+    #message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>📚 我的学习打卡</h1>
+
+    <p class="date">2026年7月17日</p>
+
+    <h2>今日目标</h2>
+
+    <ul>
+      <li>✅ 背 20 个英语单词</li>
+      <li>✅ 完成数学作业</li>
+      <li>⬜ 学习 30 分钟编程</li>
+    </ul>
+
+    <h2>今日进度</h2>
+
+    <div class="progress">
+      <div class="progress-bar">60%</div>
+    </div>
+
+    <h2>今日笔记</h2>
+
+    <p>
+      今天创建了自己的第一个 GitHub 项目，
+      学会了创建仓库和提交文件。
+    </p>
+
+    <button onclick="checkIn()">完成今日打卡</button>
+
+    <p id="message"></p>
+  </main>
+
+  <script>
+    function checkIn() {
+      const message = document.getElementById("message");
+
+      message.textContent = "🎉 打卡成功，继续保持！";
+    }
+  </script>
+</body>
+</html>
