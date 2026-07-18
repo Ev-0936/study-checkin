@@ -105,7 +105,8 @@
       今天创建了自己的第一个 GitHub 项目，
       学会了创建仓库和提交文件。
     </p>
-
+<input type="text" id="study" placeholder="今天学习了什么？">   
+    
     <button onclick="checkIn()">完成今日打卡</button>
 
     <p id="message"></p>
@@ -121,11 +122,12 @@ document.getElementById("today").textContent =
     day: "numeric",
     weekday: "long"
   });
-    function checkIn() {
-      const message = document.getElementById("message");
+function checkIn() {
+  const study = document.getElementById("study").value;
+  const message = document.getElementById("message");
 
-      message.textContent = "🎉 打卡成功，继续保持！";
-    }
+  message.textContent = "🎉 今天学习了：" + study;
+}
   </script>
 </body>
 </html>
